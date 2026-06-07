@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskflow — Todo App</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="header">
+            <h1>Task<span>flow</span></h1>
+            <div class="stats">
+                <span class="stat-chip active" id="total-chip">0 tasks</span>
+                <span class="stat-chip" id="done-chip">0 done</span>
+                <span class="stat-chip" id="pending-chip">0 pending</span>
+            </div>
+        </div>
+
+        <div class="input-row">
+            <input type="text" class="task-input" id="taskInput" placeholder="Add a new task..." maxlength="100" />
+            <select class="priority-sel" id="prioritySel">
+      <option value="medium">🟡 Medium</option>
+      <option value="high">🔴 High</option>
+      <option value="low">🟢 Low</option>
+    </select>
+            <button class="add-btn" id="addBtn">+ Add</button>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="tab active" data-filter="all">All</button>
+            <button class="tab" data-filter="pending">Pending</button>
+            <button class="tab" data-filter="done">Done</button>
+            <button class="tab" data-filter="high">🔴 High</button>
+        </div>
+
+        <div class="task-list" id="taskList"></div>
+
+        <div class="footer-row">
+            <button class="clear-btn" id="clearDoneBtn">Clear completed</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
